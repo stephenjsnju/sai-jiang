@@ -3,200 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="姜赛 (Sai Jiang) — 常州大学王诤微电子学院 副教授、硕士生导师。研究方向：半导体器件、类脑神经形态器件、集成电路、类脑人工智能。">
 <title>Sai Jiang (姜赛) — Changzhou University</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --bg: #ffffff;
-  --bg-warm: #f6f5f4;
-  --text: rgba(0,0,0,0.92);
-  --text-secondary: #615d59;
+  --bg-warm: #f7f6f4;
+  --text: rgba(0,0,0,0.9);
+  --text-secondary: #625d59;
   --text-muted: #a39e98;
-  --accent: #0075de;
-  --accent-hover: #005bab;
-  --accent-light: #f2f9ff;
-  --border: 1px solid rgba(0,0,0,0.08);
-  --shadow-card: 0 4px 18px rgba(0,0,0,0.04), 0 2px 7px rgba(0,0,0,0.027), 0 0.8px 3px rgba(0,0,0,0.02), 0 0.175px 1.04px rgba(0,0,0,0.01);
+  --accent: #1a5fdc;
+  --accent-hover: #1449b0;
+  --accent-light: #eef4ff;
+  --border: 1px solid rgba(0,0,0,0.07);
+  --shadow-card: 0 4px 20px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.03);
   --radius: 12px;
   --radius-sm: 6px;
-  --max-width: 880px;
+  --max-width: 900px;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--bg);
+  font-size: 16px; line-height: 1.65;
+  color: var(--text); background: var(--bg);
   -webkit-font-smoothing: antialiased;
 }
-
 .zh { font-family: 'Noto Serif SC', 'Inter', serif; }
 
-/* ===== NAVIGATION ===== */
 nav {
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: var(--border);
-  z-index: 100;
-  padding: 0 24px;
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: var(--border); padding: 0 24px;
 }
-.nav-inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 52px;
-}
-.nav-logo { font-weight: 600; font-size: 15px; color: var(--text); text-decoration: none; letter-spacing: -0.2px; }
+.nav-inner { max-width: var(--max-width); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+.nav-logo { font-weight: 600; font-size: 15px; color: var(--text); text-decoration: none; }
 .nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a {
-  font-size: 14px; font-weight: 500; color: var(--text-secondary);
-  text-decoration: none; transition: color 0.15s;
-}
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
 .nav-links a:hover { color: var(--text); }
 
-/* ===== SECTIONS ===== */
-section { padding: 64px 24px; }
+section { padding: 72px 24px; }
 .section-inner { max-width: var(--max-width); margin: 0 auto; }
-
 .bg-warm { background: var(--bg-warm); }
 
-/* ===== HERO ===== */
-.hero { padding: 80px 24px 56px; }
+/* Hero */
+.hero { padding: 88px 24px 64px; }
 .hero-inner { max-width: var(--max-width); margin: 0 auto; }
-.hero-name {
-  font-size: 3rem; font-weight: 700; line-height: 1.15;
-  letter-spacing: -1.5px; color: var(--text); margin-bottom: 8px;
-}
-.hero-name .zh {
-  font-size: 2.4rem; font-weight: 600; color: var(--text-secondary);
-  display: block; margin-top: 4px;
-}
-.hero-affil {
-  font-size: 1.15rem; font-weight: 500; color: var(--text-secondary);
-  margin-bottom: 16px; line-height: 1.5;
-}
+.hero-name { font-size: 2.8rem; font-weight: 700; line-height: 1.15; letter-spacing: -1.2px; color: var(--text); margin-bottom: 4px; }
+.hero-name .zh { font-size: 2.2rem; font-weight: 600; color: var(--text-secondary); display: block; margin-top: 4px; }
+.hero-title { font-size: 1.1rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 6px; line-height: 1.6; }
+.hero-dept { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; }
 .hero-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .hero-links a {
   display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 14px; border-radius: 9999px;
+  padding: 7px 16px; border-radius: 9999px;
   font-size: 13px; font-weight: 500; text-decoration: none;
   transition: all 0.15s;
 }
 .link-primary { background: var(--accent); color: #fff; }
 .link-primary:hover { background: var(--accent-hover); }
-.link-ghost { border: var(--border); color: var(--text-secondary); background: transparent; }
-.link-ghost:hover { background: rgba(0,0,0,0.04); color: var(--text); }
-.link-mail { background: var(--bg-warm); color: var(--text-secondary); }
-.link-mail:hover { background: rgba(0,0,0,0.08); color: var(--text); }
+.link-outline { border: var(--border); color: var(--text-secondary); }
+.link-outline:hover { background: rgba(0,0,0,0.04); color: var(--text); }
+.link-subtle { background: var(--bg-warm); color: var(--text-secondary); }
+.link-subtle:hover { background: rgba(0,0,0,0.08); color: var(--text); }
 
-/* ===== SECTION TITLES ===== */
-.section-label {
-  font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px;
-}
-.section-title {
-  font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px;
-  color: var(--text); margin-bottom: 28px; line-height: 1.25;
-}
+/* Section headers */
+.section-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px; }
+.section-title { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.4px; color: var(--text); margin-bottom: 28px; line-height: 1.25; }
 
-/* ===== ABOUT ===== */
-.about-text { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 680px; }
-.about-text p + p { margin-top: 12px; }
-.interest-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-.interest-tag {
-  padding: 4px 12px; border-radius: 9999px;
-  background: var(--accent-light); color: var(--accent);
-  font-size: 13px; font-weight: 500;
-}
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { padding: 4px 13px; border-radius: 9999px; background: var(--accent-light); color: var(--accent); font-size: 13px; font-weight: 500; }
 
-/* ===== PUBLICATIONS ===== */
-.pub-list { display: flex; flex-direction: column; gap: 12px; }
-.pub-item {
-  padding: 20px 24px; background: #fff; border: var(--border);
-  border-radius: var(--radius); box-shadow: var(--shadow-card);
-  transition: box-shadow 0.2s, border-color 0.2s;
-}
-.pub-item:hover { border-color: rgba(0,0,0,0.15); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
-.pub-year {
-  font-size: 12px; font-weight: 600; color: var(--accent);
-  margin-bottom: 4px; letter-spacing: 0.03em;
-}
-.pub-title {
-  font-size: 1.05rem; font-weight: 600; line-height: 1.4;
-  color: var(--text); margin-bottom: 4px;
-}
-.pub-venue {
-  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;
-}
-.pub-authors { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
-.highlight { color: var(--text); font-weight: 600; }
-.pub-link {
-  display: inline-flex; align-items: center; gap: 4px;
-  margin-top: 10px; font-size: 13px; font-weight: 500; color: var(--accent);
-  text-decoration: none; transition: color 0.15s;
-}
-.pub-link:hover { color: var(--accent-hover); text-decoration: underline; }
-.pub-link svg { width: 14px; height: 14px; }
+/* About */
+.about-text { font-size: 1.02rem; line-height: 1.75; color: var(--text-secondary); max-width: 680px; }
+.about-text p + p { margin-top: 10px; }
+.edu-item { margin-top: 16px; padding-left: 16px; border-left: 2px solid var(--accent-light); }
+.edu-item .year { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+.edu-item .desc { font-size: 0.95rem; color: var(--text-secondary); }
 
-/* ===== METRICS ===== */
-.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
-.metric-card {
-  text-align: center; padding: 24px 16px;
-  background: #fff; border: var(--border);
-  border-radius: var(--radius); box-shadow: var(--shadow-card);
-}
-.metric-num { font-size: 2.2rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; line-height: 1; }
-.metric-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
+/* Metrics */
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+.metric-card { text-align: center; padding: 22px 14px; background: #fff; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-card); }
+.metric-num { font-size: 2rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; line-height: 1; }
+.metric-label { font-size: 0.82rem; color: var(--text-secondary); margin-top: 5px; font-weight: 500; }
 
-/* ===== CONTACT ===== */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.contact-card {
-  padding: 24px; background: #fff; border: var(--border);
-  border-radius: var(--radius); box-shadow: var(--shadow-card);
-}
-.contact-card h3 { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
-.contact-card p, .contact-card a { font-size: 1rem; color: var(--text); text-decoration: none; }
+/* Publications */
+.pub-list { display: flex; flex-direction: column; gap: 10px; }
+.pub-item { padding: 18px 22px; background: #fff; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-card); transition: box-shadow 0.2s; }
+.pub-item:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.06); }
+.pub-year { font-size: 11px; font-weight: 600; color: var(--accent); margin-bottom: 3px; letter-spacing: 0.04em; }
+.pub-title { font-size: 0.98rem; font-weight: 600; line-height: 1.4; color: var(--text); margin-bottom: 2px; }
+.pub-venue { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; }
+.pub-note { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact-card { padding: 22px; background: #fff; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-card); }
+.contact-card h3 { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+.contact-card p, .contact-card a { font-size: 0.95rem; color: var(--text); text-decoration: none; word-break: break-all; }
 .contact-card a:hover { color: var(--accent); }
 
-/* ===== FOOTER ===== */
-footer {
-  text-align: center; padding: 32px 24px;
-  font-size: 0.85rem; color: var(--text-muted);
-  border-top: var(--border);
-}
+footer { text-align: center; padding: 36px 24px; font-size: 0.85rem; color: var(--text-muted); border-top: var(--border); }
 
-/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .hero-name { font-size: 2.2rem; letter-spacing: -1px; }
-  .hero-name .zh { font-size: 1.7rem; }
-  .hero-affil { font-size: 1rem; }
-  .nav-links { display: none; }
-  section { padding: 40px 20px; }
-  .hero { padding: 56px 20px 40px; }
-  .pub-item { padding: 16px 18px; }
-  .metrics { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .metric-num { font-size: 1.6rem; }
+  .hero-name { font-size: 2rem; letter-spacing: -0.8px; }
+  .hero-name .zh { font-size: 1.5rem; }
+  section { padding: 48px 20px; }
+  .hero { padding: 60px 20px 40px; }
+  .pub-item { padding: 14px 16px; }
   .contact-grid { grid-template-columns: 1fr; }
-  .section-title { font-size: 1.4rem; }
+  .section-title { font-size: 1.35rem; }
+  .nav-links { display: none; }
 }
 
 @media (max-width: 480px) {
-  .hero-name { font-size: 1.8rem; }
-  .hero-name .zh { font-size: 1.4rem; }
-  .metrics { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-  .metric-card { padding: 16px 8px; }
-  .metric-num { font-size: 1.4rem; }
-  section { padding: 32px 16px; }
+  .hero-name { font-size: 1.6rem; }
+  .hero-name .zh { font-size: 1.2rem; }
+  .metrics { gap: 8px; }
+  .metric-num { font-size: 1.5rem; }
+  section { padding: 36px 16px; }
 }
 </style>
 </head>
@@ -208,6 +136,7 @@ footer {
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -219,32 +148,34 @@ footer {
       Sai Jiang
       <span class="zh">姜赛</span>
     </h1>
-    <p class="hero-affil">
-      Researcher · School of Computer Science and Artificial Intelligence<br>
-      Changzhou University · 常州大学
-    </p>
+    <p class="hero-title">博士 · 副教授 · 硕士生导师</p>
+    <p class="hero-dept">王诤微电子学院 / 集成电路产业学院 · 常州大学</p>
     <div class="hero-links">
-      <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="link-primary" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+      <a href="https://scholar.google.com/citations?user=IkRWEkAAAAAJ" class="link-primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
         Google Scholar
       </a>
-      <a href="mailto:jiangsai@cczu.edu.cn" class="link-mail">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 4-10 8L2 4"/></svg>
-        jiangsai@cczu.edu.cn
+      <a href="mailto:saijiang@cczu.edu.cn" class="link-subtle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 4-10 8L2 4"/></svg>
+        saijiang@cczu.edu.cn
+      </a>
+      <a href="https://jsjx.cczu.edu.cn/2024/0524/c21363a363399/page.htm" class="link-outline" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Faculty Page
       </a>
     </div>
 
     <div class="metrics">
       <div class="metric-card">
-        <div class="metric-num">201</div>
+        <div class="metric-num">1401</div>
         <div class="metric-label">Citations</div>
       </div>
       <div class="metric-card">
-        <div class="metric-num">9</div>
+        <div class="metric-num">21</div>
         <div class="metric-label">h-index</div>
       </div>
       <div class="metric-card">
-        <div class="metric-num">9</div>
+        <div class="metric-num">40</div>
         <div class="metric-label">i10-index</div>
       </div>
     </div>
@@ -254,27 +185,37 @@ footer {
 <section id="about">
   <div class="section-inner">
     <div class="section-label">About</div>
-    <h2 class="section-title">Research Interests</h2>
+    <h2 class="section-title">个人简介</h2>
     <div class="about-text">
       <p>
-        I am a researcher at the School of Computer Science and Artificial Intelligence, Changzhou University.
-        My research focuses on developing deep learning methods for medical image analysis, with applications
-        in disease diagnosis, lesion segmentation, and computer-aided detection systems.
-      </p>
-      <p>
-        My work spans retinal disease diagnosis via OCT imaging, skin lesion segmentation, brain tumor analysis,
-        and diabetic retinopathy detection using lightweight convolutional neural networks.
-        I am particularly interested in attention mechanisms, multi-scale feature fusion,
-        and weakly supervised learning approaches for biomedical image understanding.
+        姜赛，博士，常州大学王诤微电子学院副教授、硕士生导师。常州市领军人才。
+        主要研究方向为<strong>半导体器件、类脑神经形态器件、集成电路与类脑人工智能</strong>，
+        聚焦于有机/无机神经形态忆阻器、突触晶体管、存算一体器件及神经形态计算系统。
       </p>
     </div>
-    <div class="interest-tags">
-      <span class="interest-tag">Deep Learning</span>
-      <span class="interest-tag">Medical Image Analysis</span>
-      <span class="interest-tag">Computer Vision</span>
-      <span class="interest-tag">Image Segmentation</span>
-      <span class="interest-tag">Transfer Learning</span>
-      <span class="interest-tag">Attention Mechanisms</span>
+    <div class="tags" style="margin-top:18px;">
+      <span class="tag">半导体器件</span>
+      <span class="tag">类脑神经形态器件</span>
+      <span class="tag">集成电路</span>
+      <span class="tag">类脑人工智能</span>
+      <span class="tag">忆阻器</span>
+      <span class="tag">有机电子学</span>
+    </div>
+
+    <h3 style="margin-top:32px;font-size:1rem;font-weight:600;color:var(--text);">教育背景</h3>
+    <div class="edu-item">
+      <div class="year">2015.09 – 2020.08</div>
+      <div class="desc">南京大学 电子科学与技术专业 工学博士</div>
+    </div>
+    <div class="edu-item">
+      <div class="year">2011.09 – 2015.06</div>
+      <div class="desc">南京信息工程大学 物理专业 理学学士</div>
+    </div>
+
+    <h3 style="margin-top:24px;font-size:1rem;font-weight:600;color:var(--text);">工作履历</h3>
+    <div class="edu-item">
+      <div class="year">2021.08 – 至今</div>
+      <div class="desc">常州大学 集成电路专业 教师</div>
     </div>
   </div>
 </section>
@@ -282,120 +223,131 @@ footer {
 <section id="publications" class="bg-warm">
   <div class="section-inner">
     <div class="section-label">Publications</div>
-    <h2 class="section-title">Selected Publications</h2>
+    <h2 class="section-title">代表性论著</h2>
     <div class="pub-list">
 
       <article class="pub-item">
+        <div class="pub-year">2025</div>
+        <h3 class="pub-title">Robust Sb₂Se₃/Hafnium Zirconium Oxide Synaptic Memristors with Dynamic Learning Rate Strategy for Generalizable Neuromorphic Networks</h3>
+        <div class="pub-venue"><strong>Advanced Functional Materials</strong>, 0:e27371</div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2025</div>
+        <h3 class="pub-title">Reconfigurable Neuromorphic Networks Enabled by Robust Organic Memristors with Tunable Plasticity</h3>
+        <div class="pub-venue"><strong>Journal of Physics D: Applied Physics</strong>, 58(41): 415108</div>
+        <div class="pub-note">Corresponding author</div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2025</div>
+        <h3 class="pub-title">Regulation of the Charge Carrier Dynamics in Antimony Selenide Thin-Film Solar Cells</h3>
+        <div class="pub-venue"><strong>Advanced Functional Materials</strong>, 35(13): 2417868</div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2025</div>
+        <h3 class="pub-title">Modulation of Carrier Dynamics via Dual-Hole Transport Layers in High-Efficiency Antimony Selenide Thin-Film Solar Cells</h3>
+        <div class="pub-venue"><strong>Journal of Materials Chemistry C</strong>, 13(45): 22750–22756</div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2024</div>
+        <h3 class="pub-title">Energy-Efficient Reservoir Computing Based on Solution-Processed Electrolyte/Ferroelectric Memcapacitive Synapses for Biosignal Classification</h3>
+        <div class="pub-venue"><strong>Journal of Physical Chemistry Letters</strong>, 8501–8509</div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2024</div>
+        <h3 class="pub-title">Task-Adaptive Neuromorphic Computing Using Reconfigurable Organic Neuristors with Tunable Plasticity and Logic-in-Memory Operations</h3>
+        <div class="pub-venue"><strong>Journal of Physical Chemistry Letters</strong>, 15, 2301–2310</div>
+      </article>
+
+      <article class="pub-item">
         <div class="pub-year">2023</div>
-        <h3 class="pub-title">Attention-guided Graph Convolutional Network for Medical Image Segmentation</h3>
-        <div class="pub-venue">Expert Systems with Applications</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
+        <h3 class="pub-title">Self-Powered Organic Optoelectronic Synapses with Binarized Weights for Noise-Suppressed Visual Perception</h3>
+        <div class="pub-venue"><strong>ACS Applied Electronic Materials</strong>, 5, 4915–4924</div>
       </article>
 
       <article class="pub-item">
         <div class="pub-year">2022</div>
-        <h3 class="pub-title">Dual-Branch Attention Network for Skin Lesion Segmentation</h3>
-        <div class="pub-venue">IEEE Access</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
+        <h3 class="pub-title">Retina-Inspired Self-Powered Artificial Optoelectronic Synapses with Selective Detection in Organic Asymmetric Heterojunctions</h3>
+        <div class="pub-venue"><strong>Advanced Science</strong>, 9, 2103494</div>
+        <div class="pub-note">Co-first author</div>
       </article>
 
       <article class="pub-item">
         <div class="pub-year">2022</div>
-        <h3 class="pub-title">Weakly Supervised Learning for Medical Image Segmentation Based on Attention</h3>
-        <div class="pub-venue">IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2022</div>
-        <h3 class="pub-title">Lightweight Convolutional Neural Network for Real-Time Diabetic Retinopathy Detection</h3>
-        <div class="pub-venue">Journal of Healthcare Engineering</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2021</div>
-        <h3 class="pub-title">A Deep Learning Framework for Diagnosis of Retinal Diseases Based on Optical Coherence Tomography Images</h3>
-        <div class="pub-venue">Biomedical Signal Processing and Control</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2021</div>
-        <h3 class="pub-title">MLFF-Net: Multi-level Feature Fusion Network for Medical Image Segmentation</h3>
-        <div class="pub-venue">Computers in Biology and Medicine</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2021</div>
-        <h3 class="pub-title">A Novel Approach for Lung Nodule Classification Using Transfer Learning</h3>
-        <div class="pub-venue">CCF Chinese Conference on Computer Vision (CCCV)</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
+        <h3 class="pub-title">Molecular-Layer-Defined Asymmetric Schottky Contacts in Organic Planar Diodes for Self-Powered Optoelectronic Synapses</h3>
+        <div class="pub-venue"><strong>Journal of Physical Chemistry Letters</strong>, 13, 2338</div>
+        <div class="pub-note">Co-first author</div>
       </article>
 
       <article class="pub-item">
         <div class="pub-year">2020</div>
-        <h3 class="pub-title">Multi-scale Feature Fusion Network for Brain Tumor Segmentation</h3>
-        <div class="pub-venue">Journal of Imaging</div>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          View on Google Scholar
-        </a>
+        <h3 class="pub-title">Molecular Layer-Defined Transition of Carrier Distribution and Correlation with Transport in Organic Crystalline Semiconductors</h3>
+        <div class="pub-venue"><strong>ACS Applied Materials & Interfaces</strong>, 12, 26267–26275</div>
       </article>
 
+    </div>
+    <p style="margin-top:14px;font-size:0.85rem;color:var(--text-muted);">
+      完整论文列表见 <a href="https://scholar.google.com/citations?user=IkRWEkAAAAAJ" style="color:var(--accent);">Google Scholar</a>
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-label">Projects & Patents</div>
+    <h2 class="section-title">研究项目与专利</h2>
+
+    <h3 style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:12px;">主持项目</h3>
+    <div class="pub-list" style="margin-bottom:28px;">
+      <div class="pub-item"><div class="pub-year">2023–2025</div><div class="pub-title" style="font-weight:500;">国家自然科学基金青年项目</div><div class="pub-venue">主持</div></div>
+      <div class="pub-item"><div class="pub-year">2021–2023</div><div class="pub-title" style="font-weight:500;">常州市领军型创新人才引进培育项目</div><div class="pub-venue">主持</div></div>
+      <div class="pub-item"><div class="pub-year">2022–2024</div><div class="pub-title" style="font-weight:500;">常州市科技局应用基础研究项目</div><div class="pub-venue">主持</div></div>
+      <div class="pub-item"><div class="pub-year">2024–2025</div><div class="pub-title" style="font-weight:500;">教育部产学合作协同育人项目</div><div class="pub-venue">主持</div></div>
+      <div class="pub-item"><div class="pub-year">2026–2027</div><div class="pub-title" style="font-weight:500;">常州大学化合物半导体创新联合体项目</div><div class="pub-venue">主持</div></div>
+      <div class="pub-item"><div class="pub-year">2024–2026</div><div class="pub-title" style="font-weight:500;">南京大学固体微结构物理国家重点实验室开放课题</div><div class="pub-venue">主持</div></div>
+    </div>
+
+    <h3 style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:12px;">授权专利</h3>
+    <div class="pub-list">
+      <div class="pub-item"><div class="pub-title" style="font-weight:500;font-size:0.9rem;">一种液相制备超薄二维电学功能性薄膜的方法</div><div class="pub-venue">ZL201610826195.4</div></div>
+      <div class="pub-item"><div class="pub-title" style="font-weight:500;font-size:0.9rem;">基于界面增强的有机反双极型晶体管器件及其制备方法</div><div class="pub-venue">CN202310285100.2</div></div>
+      <div class="pub-item"><div class="pub-title" style="font-weight:500;font-size:0.9rem;">一种具有选择性探测功能的自供电人造光电突触及其制备方法</div><div class="pub-venue">CN202111518420.5</div></div>
+      <div class="pub-item"><div class="pub-title" style="font-weight:500;font-size:0.9rem;">一种侧壁绝缘栅双极性发光三极管显示装置及其制备方法</div><div class="pub-venue">CN202210589815.2</div></div>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="bg-warm">
   <div class="section-inner">
     <div class="section-label">Contact</div>
-    <h2 class="section-title">Get in Touch</h2>
+    <h2 class="section-title">联系方式</h2>
     <div class="contact-grid">
       <div class="contact-card">
         <h3>Email</h3>
-        <a href="mailto:jiangsai@cczu.edu.cn">jiangsai@cczu.edu.cn</a>
+        <a href="mailto:saijiang@cczu.edu.cn">saijiang@cczu.edu.cn</a>
       </div>
       <div class="contact-card">
         <h3>Google Scholar</h3>
-        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" target="_blank" rel="noopener">Scholar Profile →</a>
+        <a href="https://scholar.google.com/citations?user=IkRWEkAAAAAJ" target="_blank" rel="noopener">Scholar Profile →</a>
       </div>
       <div class="contact-card">
-        <h3>Affiliation</h3>
-        <p>Changzhou University<br><span style="font-size:0.9rem;color:var(--text-secondary)">School of Computer Science and AI</span></p>
+        <h3>所属学院</h3>
+        <p>王诤微电子学院 / 集成电路产业学院<br><span style="font-size:0.85rem;color:var(--text-secondary)">常州大学 · 西太湖校区</span></p>
       </div>
       <div class="contact-card">
-        <h3>Location</h3>
-        <p>Changzhou, Jiangsu, China</p>
+        <h3>地址</h3>
+        <p>江苏省常州市武进区延政西大道2468号</p>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2024 Sai Jiang. Built with simplicity in mind.</p>
+  <p>&copy; 2024 Sai Jiang · School of Microelectronics & Integrated Circuits, Changzhou University</p>
 </footer>
 
 </body>
