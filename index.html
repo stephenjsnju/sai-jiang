@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Jiang (姜赛) — Changzhou University</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-warm: #f6f5f4;
+  --text: rgba(0,0,0,0.92);
+  --text-secondary: #615d59;
+  --text-muted: #a39e98;
+  --accent: #0075de;
+  --accent-hover: #005bab;
+  --accent-light: #f2f9ff;
+  --border: 1px solid rgba(0,0,0,0.08);
+  --shadow-card: 0 4px 18px rgba(0,0,0,0.04), 0 2px 7px rgba(0,0,0,0.027), 0 0.8px 3px rgba(0,0,0,0.02), 0 0.175px 1.04px rgba(0,0,0,0.01);
+  --radius: 12px;
+  --radius-sm: 6px;
+  --max-width: 880px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.zh { font-family: 'Noto Serif SC', 'Inter', serif; }
+
+/* ===== NAVIGATION ===== */
+nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: var(--border);
+  z-index: 100;
+  padding: 0 24px;
+}
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+.nav-logo { font-weight: 600; font-size: 15px; color: var(--text); text-decoration: none; letter-spacing: -0.2px; }
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: 14px; font-weight: 500; color: var(--text-secondary);
+  text-decoration: none; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+
+/* ===== SECTIONS ===== */
+section { padding: 64px 24px; }
+.section-inner { max-width: var(--max-width); margin: 0 auto; }
+
+.bg-warm { background: var(--bg-warm); }
+
+/* ===== HERO ===== */
+.hero { padding: 80px 24px 56px; }
+.hero-inner { max-width: var(--max-width); margin: 0 auto; }
+.hero-name {
+  font-size: 3rem; font-weight: 700; line-height: 1.15;
+  letter-spacing: -1.5px; color: var(--text); margin-bottom: 8px;
+}
+.hero-name .zh {
+  font-size: 2.4rem; font-weight: 600; color: var(--text-secondary);
+  display: block; margin-top: 4px;
+}
+.hero-affil {
+  font-size: 1.15rem; font-weight: 500; color: var(--text-secondary);
+  margin-bottom: 16px; line-height: 1.5;
+}
+.hero-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.hero-links a {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 9999px;
+  font-size: 13px; font-weight: 500; text-decoration: none;
+  transition: all 0.15s;
+}
+.link-primary { background: var(--accent); color: #fff; }
+.link-primary:hover { background: var(--accent-hover); }
+.link-ghost { border: var(--border); color: var(--text-secondary); background: transparent; }
+.link-ghost:hover { background: rgba(0,0,0,0.04); color: var(--text); }
+.link-mail { background: var(--bg-warm); color: var(--text-secondary); }
+.link-mail:hover { background: rgba(0,0,0,0.08); color: var(--text); }
+
+/* ===== SECTION TITLES ===== */
+.section-label {
+  font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px;
+}
+.section-title {
+  font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px;
+  color: var(--text); margin-bottom: 28px; line-height: 1.25;
+}
+
+/* ===== ABOUT ===== */
+.about-text { font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary); max-width: 680px; }
+.about-text p + p { margin-top: 12px; }
+.interest-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.interest-tag {
+  padding: 4px 12px; border-radius: 9999px;
+  background: var(--accent-light); color: var(--accent);
+  font-size: 13px; font-weight: 500;
+}
+
+/* ===== PUBLICATIONS ===== */
+.pub-list { display: flex; flex-direction: column; gap: 12px; }
+.pub-item {
+  padding: 20px 24px; background: #fff; border: var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow-card);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.pub-item:hover { border-color: rgba(0,0,0,0.15); box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+.pub-year {
+  font-size: 12px; font-weight: 600; color: var(--accent);
+  margin-bottom: 4px; letter-spacing: 0.03em;
+}
+.pub-title {
+  font-size: 1.05rem; font-weight: 600; line-height: 1.4;
+  color: var(--text); margin-bottom: 4px;
+}
+.pub-venue {
+  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;
+}
+.pub-authors { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
+.highlight { color: var(--text); font-weight: 600; }
+.pub-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 10px; font-size: 13px; font-weight: 500; color: var(--accent);
+  text-decoration: none; transition: color 0.15s;
+}
+.pub-link:hover { color: var(--accent-hover); text-decoration: underline; }
+.pub-link svg { width: 14px; height: 14px; }
+
+/* ===== METRICS ===== */
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
+.metric-card {
+  text-align: center; padding: 24px 16px;
+  background: #fff; border: var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow-card);
+}
+.metric-num { font-size: 2.2rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; line-height: 1; }
+.metric-label { font-size: 0.85rem; color: var(--text-secondary); margin-top: 6px; font-weight: 500; }
+
+/* ===== CONTACT ===== */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-card {
+  padding: 24px; background: #fff; border: var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow-card);
+}
+.contact-card h3 { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.contact-card p, .contact-card a { font-size: 1rem; color: var(--text); text-decoration: none; }
+.contact-card a:hover { color: var(--accent); }
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center; padding: 32px 24px;
+  font-size: 0.85rem; color: var(--text-muted);
+  border-top: var(--border);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-name { font-size: 2.2rem; letter-spacing: -1px; }
+  .hero-name .zh { font-size: 1.7rem; }
+  .hero-affil { font-size: 1rem; }
+  .nav-links { display: none; }
+  section { padding: 40px 20px; }
+  .hero { padding: 56px 20px 40px; }
+  .pub-item { padding: 16px 18px; }
+  .metrics { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .metric-num { font-size: 1.6rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.4rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-name { font-size: 1.8rem; }
+  .hero-name .zh { font-size: 1.4rem; }
+  .metrics { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .metric-card { padding: 16px 8px; }
+  .metric-num { font-size: 1.4rem; }
+  section { padding: 32px 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Sai Jiang</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-name">
+      Sai Jiang
+      <span class="zh">姜赛</span>
+    </h1>
+    <p class="hero-affil">
+      Researcher · School of Computer Science and Artificial Intelligence<br>
+      Changzhou University · 常州大学
+    </p>
+    <div class="hero-links">
+      <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="link-primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        Google Scholar
+      </a>
+      <a href="mailto:jiangsai@cczu.edu.cn" class="link-mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 4-10 8L2 4"/></svg>
+        jiangsai@cczu.edu.cn
+      </a>
+    </div>
+
+    <div class="metrics">
+      <div class="metric-card">
+        <div class="metric-num">201</div>
+        <div class="metric-label">Citations</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">9</div>
+        <div class="metric-label">h-index</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">9</div>
+        <div class="metric-label">i10-index</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">About</div>
+    <h2 class="section-title">Research Interests</h2>
+    <div class="about-text">
+      <p>
+        I am a researcher at the School of Computer Science and Artificial Intelligence, Changzhou University.
+        My research focuses on developing deep learning methods for medical image analysis, with applications
+        in disease diagnosis, lesion segmentation, and computer-aided detection systems.
+      </p>
+      <p>
+        My work spans retinal disease diagnosis via OCT imaging, skin lesion segmentation, brain tumor analysis,
+        and diabetic retinopathy detection using lightweight convolutional neural networks.
+        I am particularly interested in attention mechanisms, multi-scale feature fusion,
+        and weakly supervised learning approaches for biomedical image understanding.
+      </p>
+    </div>
+    <div class="interest-tags">
+      <span class="interest-tag">Deep Learning</span>
+      <span class="interest-tag">Medical Image Analysis</span>
+      <span class="interest-tag">Computer Vision</span>
+      <span class="interest-tag">Image Segmentation</span>
+      <span class="interest-tag">Transfer Learning</span>
+      <span class="interest-tag">Attention Mechanisms</span>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="bg-warm">
+  <div class="section-inner">
+    <div class="section-label">Publications</div>
+    <h2 class="section-title">Selected Publications</h2>
+    <div class="pub-list">
+
+      <article class="pub-item">
+        <div class="pub-year">2023</div>
+        <h3 class="pub-title">Attention-guided Graph Convolutional Network for Medical Image Segmentation</h3>
+        <div class="pub-venue">Expert Systems with Applications</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2022</div>
+        <h3 class="pub-title">Dual-Branch Attention Network for Skin Lesion Segmentation</h3>
+        <div class="pub-venue">IEEE Access</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2022</div>
+        <h3 class="pub-title">Weakly Supervised Learning for Medical Image Segmentation Based on Attention</h3>
+        <div class="pub-venue">IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2022</div>
+        <h3 class="pub-title">Lightweight Convolutional Neural Network for Real-Time Diabetic Retinopathy Detection</h3>
+        <div class="pub-venue">Journal of Healthcare Engineering</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2021</div>
+        <h3 class="pub-title">A Deep Learning Framework for Diagnosis of Retinal Diseases Based on Optical Coherence Tomography Images</h3>
+        <div class="pub-venue">Biomedical Signal Processing and Control</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2021</div>
+        <h3 class="pub-title">MLFF-Net: Multi-level Feature Fusion Network for Medical Image Segmentation</h3>
+        <div class="pub-venue">Computers in Biology and Medicine</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2021</div>
+        <h3 class="pub-title">A Novel Approach for Lung Nodule Classification Using Transfer Learning</h3>
+        <div class="pub-venue">CCF Chinese Conference on Computer Vision (CCCV)</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-year">2020</div>
+        <h3 class="pub-title">Multi-scale Feature Fusion Network for Brain Tumor Segmentation</h3>
+        <div class="pub-venue">Journal of Imaging</div>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" class="pub-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          View on Google Scholar
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <a href="mailto:jiangsai@cczu.edu.cn">jiangsai@cczu.edu.cn</a>
+      </div>
+      <div class="contact-card">
+        <h3>Google Scholar</h3>
+        <a href="https://scholar.google.com/citations?user=Dr8HGCaCqhIC" target="_blank" rel="noopener">Scholar Profile →</a>
+      </div>
+      <div class="contact-card">
+        <h3>Affiliation</h3>
+        <p>Changzhou University<br><span style="font-size:0.9rem;color:var(--text-secondary)">School of Computer Science and AI</span></p>
+      </div>
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Changzhou, Jiangsu, China</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2024 Sai Jiang. Built with simplicity in mind.</p>
+</footer>
+
+</body>
+</html>
