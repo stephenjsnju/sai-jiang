@@ -64,31 +64,30 @@ section { padding: 72px 24px; }
 }
 .link-primary { background: var(--accent); color: #fff; }
 .link-primary:hover { background: var(--accent-hover); }
-.link-outline { border: var(--border); color: var(--text-secondary); }
-.link-outline:hover { background: rgba(0,0,0,0.04); color: var(--text); }
+.link-outline { border: 1px solid rgba(0,0,0,0.12); color: var(--text); background: #fff; }
+.link-outline:hover { border-color: rgba(0,0,0,0.25); background: var(--bg-warm); }
 .link-subtle { background: var(--bg-warm); color: var(--text-secondary); }
-.link-subtle:hover { background: rgba(0,0,0,0.08); color: var(--text); }
+.link-subtle:hover { background: rgba(0,0,0,0.06); }
 
 /* Section headers */
 .section-label { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 8px; }
 .section-title { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.4px; color: var(--text); margin-bottom: 28px; line-height: 1.25; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag { padding: 4px 13px; border-radius: 9999px; background: var(--accent-light); color: var(--accent); font-size: 13px; font-weight: 500; }
+/* Metrics */
+.metrics { display: flex; gap: 16px; margin-top: 28px; }
+.metric-card { background: var(--bg-warm); border-radius: var(--radius-sm); padding: 14px 22px; text-align: center; min-width: 100px; }
+.metric-num { font-size: 1.6rem; font-weight: 700; color: var(--text); line-height: 1.2; }
+.metric-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
 
 /* About */
-.about-text { font-size: 1.02rem; line-height: 1.75; color: var(--text-secondary); max-width: 680px; }
-.about-text p + p { margin-top: 10px; }
+.about-text { max-width: 680px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag { background: var(--accent-light); color: var(--accent); font-size: 0.8rem; font-weight: 500; padding: 4px 12px; border-radius: 9999px; }
+
+/* Education */
 .edu-item { margin-top: 16px; padding-left: 16px; border-left: 2px solid var(--accent-light); }
 .edu-item .year { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
 .edu-item .desc { font-size: 0.95rem; color: var(--text-secondary); }
-
-/* Metrics */
-.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
-.metric-card { text-align: center; padding: 22px 14px; background: #fff; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-card); }
-.metric-num { font-size: 2rem; font-weight: 700; color: var(--accent); letter-spacing: -1px; line-height: 1; }
-.metric-label { font-size: 0.82rem; color: var(--text-secondary); margin-top: 5px; font-weight: 500; }
 
 /* Publications */
 .pub-list { display: flex; flex-direction: column; gap: 10px; }
@@ -100,31 +99,26 @@ section { padding: 72px 24px; }
 .pub-note { font-size: 0.8rem; color: var(--text-muted); font-style: italic; }
 
 /* Contact */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.contact-card { padding: 22px; background: #fff; border: var(--border); border-radius: var(--radius); box-shadow: var(--shadow-card); }
-.contact-card h3 { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
-.contact-card p, .contact-card a { font-size: 0.95rem; color: var(--text); text-decoration: none; word-break: break-all; }
-.contact-card a:hover { color: var(--accent); }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.contact-card { background: #fff; border: var(--border); border-radius: var(--radius); padding: 18px 22px; box-shadow: var(--shadow-card); }
+.contact-card h3 { font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; }
+.contact-card a { color: var(--accent); font-weight: 500; text-decoration: none; }
+.contact-card a:hover { text-decoration: underline; }
+.contact-card p { font-size: 0.92rem; color: var(--text); }
 
-footer { text-align: center; padding: 36px 24px; font-size: 0.85rem; color: var(--text-muted); border-top: var(--border); }
+footer { text-align: center; padding: 32px 24px; font-size: 0.8rem; color: var(--text-muted); }
 
 @media (max-width: 768px) {
-  .hero-name { font-size: 2rem; letter-spacing: -0.8px; }
-  .hero-name .zh { font-size: 1.5rem; }
   section { padding: 48px 20px; }
-  .hero { padding: 60px 20px 40px; }
+  .hero { padding: 60px 20px 36px; }
   .pub-item { padding: 14px 16px; }
-  .contact-grid { grid-template-columns: 1fr; }
+  .hero-name { font-size: 2.2rem; }
   .section-title { font-size: 1.35rem; }
-  .nav-links { display: none; }
+  .contact-grid { grid-template-columns: 1fr; }
 }
-
 @media (max-width: 480px) {
-  .hero-name { font-size: 1.6rem; }
-  .hero-name .zh { font-size: 1.2rem; }
-  .metrics { gap: 8px; }
-  .metric-num { font-size: 1.5rem; }
   section { padding: 36px 16px; }
+  .metrics { flex-direction: column; gap: 8px; }
 }
 </style>
 </head>
@@ -144,15 +138,12 @@ footer { text-align: center; padding: 36px 24px; font-size: 0.85rem; color: var(
 
 <header class="hero">
   <div class="hero-inner">
-    <h1 class="hero-name">
-      Sai Jiang
-      <span class="zh">姜赛</span>
-    </h1>
+    <h1 class="hero-name">Sai Jiang<span class="zh">姜赛</span></h1>
     <p class="hero-title">博士 · 副教授 · 硕士生导师</p>
     <p class="hero-dept">王诤微电子学院 / 集成电路产业学院 · 常州大学</p>
     <div class="hero-links">
       <a href="https://scholar.google.com/citations?user=IkRWEkAAAAAJ" class="link-primary" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10l-6.758 5.231L12 20l6.758-4.769z"/></svg>
         Google Scholar
       </a>
       <a href="mailto:saijiang@cczu.edu.cn" class="link-subtle">
@@ -223,76 +214,246 @@ footer { text-align: center; padding: 36px 24px; font-size: 0.85rem; color: var(
 <section id="publications" class="bg-warm">
   <div class="section-inner">
     <div class="section-label">Publications</div>
-    <h2 class="section-title">代表性论著</h2>
+    <h2 class="section-title">学术论文</h2>
+    <p style="margin-bottom:24px;color:var(--text-muted);font-size:0.9rem;">共 42 篇论文（含 3 篇补充材料），按年份分类。完整列表亦可见 <a href="https://scholar.google.com/citations?user=IkRWEkAAAAAJ" style="color:var(--accent);">Google Scholar</a>。</p>
+
+    <!-- 2025 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2025 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(4 篇)</span></h3>
     <div class="pub-list">
-
       <article class="pub-item">
-        <div class="pub-year">2025</div>
         <h3 class="pub-title">Robust Sb₂Se₃/Hafnium Zirconium Oxide Synaptic Memristors with Dynamic Learning Rate Strategy for Generalizable Neuromorphic Networks</h3>
-        <div class="pub-venue"><strong>Advanced Functional Materials</strong>, 0:e27371</div>
+        <div class="pub-venue">Advanced Functional Materials, 0:e27371</div>
       </article>
-
       <article class="pub-item">
-        <div class="pub-year">2025</div>
         <h3 class="pub-title">Reconfigurable Neuromorphic Networks Enabled by Robust Organic Memristors with Tunable Plasticity</h3>
-        <div class="pub-venue"><strong>Journal of Physics D: Applied Physics</strong>, 58(41): 415108</div>
+        <div class="pub-venue">Journal of Physics D: Applied Physics, 58(41): 415108</div>
         <div class="pub-note">Corresponding author</div>
       </article>
-
       <article class="pub-item">
-        <div class="pub-year">2025</div>
         <h3 class="pub-title">Regulation of the Charge Carrier Dynamics in Antimony Selenide Thin-Film Solar Cells</h3>
-        <div class="pub-venue"><strong>Advanced Functional Materials</strong>, 35(13): 2417868</div>
+        <div class="pub-venue">Advanced Functional Materials, 35(13): 2417868</div>
       </article>
-
       <article class="pub-item">
-        <div class="pub-year">2025</div>
         <h3 class="pub-title">Modulation of Carrier Dynamics via Dual-Hole Transport Layers in High-Efficiency Antimony Selenide Thin-Film Solar Cells</h3>
-        <div class="pub-venue"><strong>Journal of Materials Chemistry C</strong>, 13(45): 22750–22756</div>
+        <div class="pub-venue">Journal of Materials Chemistry C, 13(45): 22750–22756</div>
       </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2024</div>
-        <h3 class="pub-title">Energy-Efficient Reservoir Computing Based on Solution-Processed Electrolyte/Ferroelectric Memcapacitive Synapses for Biosignal Classification</h3>
-        <div class="pub-venue"><strong>Journal of Physical Chemistry Letters</strong>, 8501–8509</div>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2024</div>
-        <h3 class="pub-title">Task-Adaptive Neuromorphic Computing Using Reconfigurable Organic Neuristors with Tunable Plasticity and Logic-in-Memory Operations</h3>
-        <div class="pub-venue"><strong>Journal of Physical Chemistry Letters</strong>, 15, 2301–2310</div>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2023</div>
-        <h3 class="pub-title">Self-Powered Organic Optoelectronic Synapses with Binarized Weights for Noise-Suppressed Visual Perception</h3>
-        <div class="pub-venue"><strong>ACS Applied Electronic Materials</strong>, 5, 4915–4924</div>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2022</div>
-        <h3 class="pub-title">Retina-Inspired Self-Powered Artificial Optoelectronic Synapses with Selective Detection in Organic Asymmetric Heterojunctions</h3>
-        <div class="pub-venue"><strong>Advanced Science</strong>, 9, 2103494</div>
-        <div class="pub-note">Co-first author</div>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2022</div>
-        <h3 class="pub-title">Molecular-Layer-Defined Asymmetric Schottky Contacts in Organic Planar Diodes for Self-Powered Optoelectronic Synapses</h3>
-        <div class="pub-venue"><strong>Journal of Physical Chemistry Letters</strong>, 13, 2338</div>
-        <div class="pub-note">Co-first author</div>
-      </article>
-
-      <article class="pub-item">
-        <div class="pub-year">2020</div>
-        <h3 class="pub-title">Molecular Layer-Defined Transition of Carrier Distribution and Correlation with Transport in Organic Crystalline Semiconductors</h3>
-        <div class="pub-venue"><strong>ACS Applied Materials & Interfaces</strong>, 12, 26267–26275</div>
-      </article>
-
     </div>
-    <p style="margin-top:14px;font-size:0.85rem;color:var(--text-muted);">
-      完整论文列表见 <a href="https://scholar.google.com/citations?user=IkRWEkAAAAAJ" style="color:var(--accent);">Google Scholar</a>
-    </p>
+
+    <!-- 2024 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2024 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(2 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Energy-Efficient Reservoir Computing Based on Solution-Processed Electrolyte/Ferroelectric Memcapacitive Synapses for Biosignal Classification</h3>
+        <div class="pub-venue">Journal of Physical Chemistry Letters, 8501–8509</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Task-Adaptive Neuromorphic Computing Using Reconfigurable Organic Neuristors with Tunable Plasticity and Logic-in-Memory Operations</h3>
+        <div class="pub-venue">Journal of Physical Chemistry Letters, 15, 2301–2310</div>
+      </article>
+    </div>
+
+    <!-- 2023 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2023 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(4 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Self-Powered Organic Optoelectronic Synapses with Binarized Weights for Noise-Suppressed Visual Perception</h3>
+        <div class="pub-venue">ACS Applied Electronic Materials, 5, 4915–4924</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Enhancement in the Efficiency of Sb₂Se₃ Thin-Film Solar Cells by Post-Treatment with Alkali Metal Fluorides</h3>
+        <div class="pub-venue">H Guo, S Huang, H Zhu, T Zhang, K Geng, S Jiang, D Gu, J Su, X Lu, ...</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">High-Efficiency and Stable Sb₂(S, Se)₃ Thin Film Solar Cells with Phthalocyanine as a Hole Transport Layer</h3>
+        <div class="pub-venue">Journal of Materials Chemistry C, 11(37), 12707–12713</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Low-Hysteresis Perovskite Solar Cells Based on a Spray-Coated Electron Transport Layer</h3>
+        <div class="pub-venue">Journal of Materials Science: Materials in Electronics, 34(3), 172</div>
+      </article>
+    </div>
+
+    <!-- 2022 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2022 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(4 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Retina-Inspired Self-Powered Artificial Optoelectronic Synapses with Selective Detection in Organic Asymmetric Heterojunctions</h3>
+        <div class="pub-venue">Advanced Science, 9, 2103494</div>
+        <div class="pub-note">Co-first author</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Molecular-Layer-Defined Asymmetric Schottky Contacts in Organic Planar Diodes for Self-Powered Optoelectronic Synapses</h3>
+        <div class="pub-venue">Journal of Physical Chemistry Letters, 13, 2338–2347</div>
+        <div class="pub-note">Co-first author</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Fully Spray-Coated Perovskite Solar Minimodules via a Vacuum-Flash Assisted Solution Process</h3>
+        <div class="pub-venue">Journal of Electronic Materials, 51(5), 2396–2405</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">In-Situ/Operando Characterization Techniques for Organic Semiconductors and Devices</h3>
+        <div class="pub-venue">Journal of Semiconductors, 43(4), 041101</div>
+      </article>
+    </div>
+
+    <!-- 2021 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2021 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(2 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">A Smarter Pavlovian Dog with Optically Modulated Associative Learning in an Organic Ferroelectric Neuromemristor</h3>
+        <div class="pub-venue">Research, 2021</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Asymmetric Electrode Geometry Induced Photovoltaic Behavior for Self-Powered Organic Artificial Synapses</h3>
+        <div class="pub-venue">Flexible and Printed Electronics, 6(4), 044009</div>
+      </article>
+    </div>
+
+    <!-- 2020 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2020 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(11 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Patterning 2D Organic Crystalline Semiconductors via Thermally Induced Self-Assembly</h3>
+        <div class="pub-venue">Advanced Electronic Materials, 6(9), 2000438</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Probing Coulomb Interactions on Charge Transport in Few-Layer Organic Crystalline Semiconductors by the Gated van der Pauw Method</h3>
+        <div class="pub-venue">Advanced Electronic Materials, 6(7), 2000136</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">An Optically Modulated Organic Schottky-Barrier Planar-Diode-Based Artificial Synapse</h3>
+        <div class="pub-venue">Advanced Optical Materials, 8(13), 2000153</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Few-Layer Organic Crystalline van der Waals Heterojunctions for Ultrafast UV Phototransistors</h3>
+        <div class="pub-venue">Advanced Electronic Materials, 6(6), 2000062</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Molecular Layer-Defined Transition of Carrier Distribution and Correlation with Transport in Organic Crystalline Semiconductors</h3>
+        <div class="pub-venue">ACS Applied Materials & Interfaces, 12, 26267–26275</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Approaching Isotropic Transfer Integrals in Crystalline Organic Semiconductors</h3>
+        <div class="pub-venue">Physical Review Materials, 4(4), 044604</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Role of Schottky Barrier and Access Resistance in Organic Field-Effect Transistors</h3>
+        <div class="pub-venue">The Journal of Physical Chemistry Letters, 11(4), 1466–1472</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Solution-Processed Organic Single-Crystalline Semiconductors with a Fence-Like Shape via Ultrasound Concussion</h3>
+        <div class="pub-venue">Journal of Materials Chemistry C, 8(7), 2589–2593</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Effect of Access Resistance on the Experimentally Measured Temperature–Carrier Mobility Dependence in Highly-Crystalline Organic Semiconductors</h3>
+        <div class="pub-venue">Materials Advances, 1(6), 1799–1804</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Semiconductor/Dielectric Interface in Organic Field-Effect Transistors: Charge Transport, Interfacial Effects, and Perspectives</h3>
+        <div class="pub-venue">Advances in Physics: X, 5(1), 1747945</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Correction: Solution-Processed Organic Single-Crystalline Semiconductors with a Fence-Like Shape via Ultrasound Concussion</h3>
+        <div class="pub-venue">Journal of Materials Chemistry C, 8(21), 7255</div>
+      </article>
+    </div>
+
+    <!-- 2019 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2019 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(3 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Additive-Assisted "Metal-Wire-Gap" Process for N-Type Two-Dimensional Organic Crystalline Films</h3>
+        <div class="pub-venue">Organic Electronics, 68, 176–181</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Solution-Processed 2D Molecular Crystals: Fabrication Techniques, Transistor Applications, and Physics</h3>
+        <div class="pub-venue">Advanced Materials Technologies, 4(5), 1800182</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">pJ-Level Energy-Consuming, Low-Voltage Ferroelectric Organic Field-Effect Transistor Memories</h3>
+        <div class="pub-venue">The Journal of Physical Chemistry Letters, 10(10), 2335–2340</div>
+      </article>
+    </div>
+
+    <!-- 2018 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2018 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(6 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Millimeter-Sized Two-Dimensional Molecular Crystalline Semiconductors with Precisely Defined Molecular Layers via Interfacial Assembly</h3>
+        <div class="pub-venue">The Journal of Physical Chemistry Letters, 9(23), 6755–6760</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Interfacial Flat-Lying Molecular Monolayers for Performance Enhancement in Organic Field-Effect Transistors</h3>
+        <div class="pub-venue">ACS Applied Materials & Interfaces, 10(26), 22513–22519</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Spin-Coated Crystalline Molecular Monolayers for Performance Enhancement in Organic Field-Effect Transistors</h3>
+        <div class="pub-venue">The Journal of Physical Chemistry Letters, 9(6), 1318–1323</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Unveiling the Piezoelectric Nature of Polar α-Phase P(VDF-TrFE) at Quasi-Two-Dimensional Limit</h3>
+        <div class="pub-venue">Scientific Reports, 8(1), 532</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Temperature Dependence of Piezo- and Ferroelectricity in Ultrathin P(VDF–TrFE) Films</h3>
+        <div class="pub-venue">RSC Advances, 8(51), 29164–29171</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Growth of Black Phosphorus Nanobelts and Microbelts</h3>
+        <div class="pub-venue">Small, 14(1), 1702501</div>
+      </article>
+    </div>
+
+    <!-- 2017 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2017 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(3 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Low-Voltage, High-Performance Organic Field-Effect Transistors Based on 2D Crystalline Molecular Semiconductors</h3>
+        <div class="pub-venue">Scientific Reports, 7(1), 7830</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Speed Up Ferroelectric Organic Transistor Memories by Using Two-Dimensional Molecular Crystalline Semiconductors</h3>
+        <div class="pub-venue">ACS Applied Materials & Interfaces, 9(21), 18127–18133</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Directly Writing 2D Organic Semiconducting Crystals for High-Performance Field-Effect Transistors</h3>
+        <div class="pub-venue">Journal of Materials Chemistry C, 5(43), 11246–11251</div>
+      </article>
+    </div>
+
+    <!-- 2016 -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">2016 <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(3 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">2D Single-Crystalline Molecular Semiconductors with Precise Layer Definition Achieved by Floating-Coffee-Ring-Driven Assembly</h3>
+        <div class="pub-venue">Advanced Functional Materials, 26(19), 3191–3198</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">2D Molecular Semiconductors: 2D Single-Crystalline Molecular Semiconductors with Precise Layer Definition Achieved by Floating-Coffee-Ring-Driven Assembly (Cover)</h3>
+        <div class="pub-venue">Advanced Functional Materials, 26(19), 3181</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">High-Performance Non-Volatile Field-Effect Transistor Memories Using an Amorphous Oxide Semiconductor and Ferroelectric Polymer</h3>
+        <div class="pub-venue">Journal of Materials Chemistry C, 4(34), 7917–7923</div>
+      </article>
+    </div>
+
+    <!-- Supplementary Materials -->
+    <h3 style="font-size:1.15rem;font-weight:700;color:var(--text);margin-top:28px;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid var(--accent-light);">Supplementary Materials <span style="font-size:0.85rem;font-weight:400;color:var(--text-muted);">(3 篇)</span></h3>
+    <div class="pub-list">
+      <article class="pub-item">
+        <h3 class="pub-title">Supplementary Material: Large-Area Monolayer n-Type Molecular Semiconductors with Improved Thermal Stability and Charge Transport</h3>
+        <div class="pub-venue">S Jiang, L Peng, X Du, Q Dai, J Guo, J Gu, J Su, D Gu, Q Wang, H Guo, ...</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Supporting Information: Temperature Dependence of Piezo- and Ferroelectricity in Ultrathin P(VDF-TrFE) Films</h3>
+        <div class="pub-venue">J Qian, S Jiang, Q Wang, C Yang, Y Duan, H Wang, J Guo, Y Shi, Y Li</div>
+      </article>
+      <article class="pub-item">
+        <h3 class="pub-title">Supporting Information: Speed Up Ferroelectric Organic Transistor Memories by Using Two-Dimensional Molecular Crystalline Semiconductors</h3>
+        <div class="pub-venue">L Song, Y Wang, Q Gao, Y Guo, Q Wang, J Qian, S Jiang, B Wu, X Wang, ...</div>
+      </article>
+    </div>
   </div>
 </section>
 
